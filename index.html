@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Przelicznik walut</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="body">
+    <div class="container">
+      <form class="form-form">
+        <header class="header">
+          <h1>Przelicznik walut</h1>
+        </header>
+        <p>
+          <label>
+            <span class="labelText">Wybierz posiadaną walutę:</span>
+            <select class="js-currencyOwned form-field" name="currencyOwned">
+              <option value="eur">EUR</option>
+              <option value="pln">PLN</option>
+              <option value="dol">USD</option>
+              <option value="fr">CHF</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="labelText">Wybierz docelową walutę:</span>
+            <select class="js-currencyWanted form-field" name="currencyWanted">
+              <option value="eur">EUR</option>
+              <option value="pln">PLN</option>
+              <option value="dol">USD</option>
+              <option value="fr">CHF</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="labelText">Ile przeliczamy:</span>
+            <input class="js-moneyOwned form-field"></input>
+          </label>
+              class="js-money"
+              required
+              type="number"
+              min="0.01"
+              step="0.01"
+            />
+          </label>
+        </p>
+        <p>
+          <button id="getButton">Przelicz</button>
+        </p>
+        <p>Wychodzi:</p>
+        <span class="js-symbol"></span>
+      </form>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
