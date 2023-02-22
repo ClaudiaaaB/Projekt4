@@ -16,17 +16,16 @@ currencyWantedElement.addEventListener("input", () => {
   } else currencyOwnedElement.value = "eur";
 });
 
-const moneyOwned = moneyOwnedElement.value;
-const jsSymbol = jsSymbolElement.value;
-
 const button = document.getElementById("getButton");
 const select = document.createElement("select");
 
 button.addEventListener("click", () => {
-  fetch("https://api.frankfurter.app/latest")
+  console.log("tekst");
+  fetch("https://api.nbp.pl/api/exchangerates/tables/A/?format=json%22")
     .then((response) => response.json())
     .then((data) => {
-      getRates(data.rates);
+      //
+      console.log(data);
     });
 });
 const getRates = (rates) => {
