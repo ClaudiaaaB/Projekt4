@@ -9,51 +9,55 @@
   </head>
   <body class="body">
     <div class="container">
-      <form class="form-form">
-        <header class="header">
-          <h1>Przelicznik walut</h1>
-        </header>
+      <header class="header">
+        <h1>Przelicznik walut</h1>
+      </header>
+      <p>
+        <label>
+          <span class="labelText">Wybierz posiadaną walutę:</span>
+          <select class="js-currencyOwned form-field" name="currencyOwned">
+            <option value="eur">EUR</option>
+            <option value="pln">PLN</option>
+            <option value="dol">USD</option>
+            <option value="fr">CHF</option>
+          </select>
+        </label>
+      </p>
+      <!-- <p>
+        <label>
+          <span class="labelText">Wybierz docelową walutę:</span>
+          <select class="js-currencyWanted form-field" name="currencyWanted">
+            <option value="eur">EUR</option>
+            <option value="pln">PLN</option>
+            <option value="dol">USD</option>
+            <option value="fr">CHF</option>
+          </select>
+        </label>
+      </p> -->
+      <p>
+        <label>
+          <span class="labelText">Ile przeliczamy:</span>
+          <input
+            class="js-moneyOwned form-field"
+            required
+            type="number"
+            min="0.01"
+            step="0.01"
+          />
+        </label>
+      </p>
+      <p>
+        <button id="getButton">Przelicz</button>
+      </p>
+      <p>
+        Wychodzi: <strong class="js-exchangedAmount"></strong
+        ><span class="js-symbol"></span>
+      </p>
+      <div class="result">
         <p>
-          <label>
-            <span class="labelText">Wybierz posiadaną walutę:</span>
-            <select class="js-currencyOwned form-field" name="currencyOwned">
-              <option value="eur">EUR</option>
-              <option value="pln">PLN</option>
-              <option value="dol">USD</option>
-              <option value="fr">CHF</option>
-            </select>
-          </label>
+          <span class="final-result"></span>
         </p>
-        <p>
-          <label>
-            <span class="labelText">Wybierz docelową walutę:</span>
-            <select class="js-currencyWanted form-field" name="currencyWanted">
-              <option value="eur">EUR</option>
-              <option value="pln">PLN</option>
-              <option value="dol">USD</option>
-              <option value="fr">CHF</option>
-            </select>
-          </label>
-        </p>
-        <p>
-          <label>
-            <span class="labelText">Ile przeliczamy:</span>
-            <input class="js-moneyOwned form-field"></input>
-          </label>
-              class="js-money"
-              required
-              type="number"
-              min="0.01"
-              step="0.01"
-            />
-          </label>
-        </p>
-        <p>
-          <button id="getButton">Przelicz</button>
-        </p>
-        <p>Wychodzi:</p>
-        <span class="js-symbol"></span>
-      </form>
+      </div>
     </div>
     <script src="/index.js"></script>
   </body>
