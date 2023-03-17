@@ -6,6 +6,7 @@ const getButton = document.getElementById("get-button");
 getButton.addEventListener("click", () => {
   if (moneyOwnedElement.value < 0 || moneyOwnedElement.value === "") {
     alert("wartośc powinna być większa od 0");
+    exchangedAmountElement.innerHTML = "0.00";
     return;
   }
 
